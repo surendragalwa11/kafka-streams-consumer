@@ -42,7 +42,8 @@ public class KakfkaStreamConfiguration {
             StreamsBuilder builder
     ) {
         KStream<String, String> streams = builder.stream(topic);
-        streams.process(() -> service);
+        streams.process(() -> new KafkaStreamConsumerServices("abc"));
+        // streams.process(() -> service);
         return  streams;
     }
 }
