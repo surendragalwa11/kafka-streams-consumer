@@ -20,8 +20,8 @@ public class KafkaStreamConsumerServices extends AbstractProcessor<String, Strin
             long offset = this.processorContext.offset();
             System.out.println("Processing message" + payload);
         } catch (Exception e) {
-            System.out.println("Processing error" + e.getMessage());
-            System.out.println(e);
+            System.out.println("Processing error " + e.getMessage());
+            e.printStackTrace();
         }
 
     }
