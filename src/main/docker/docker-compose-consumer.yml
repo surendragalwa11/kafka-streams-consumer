@@ -1,0 +1,10 @@
+version: "3.0"
+services:
+  consumer:
+    image: kafka_stream_consumer
+    hostname: kafka_stream_consumer
+    ports:
+      - "8082:8080"
+    environment:
+      - "SPRING_KAFKA_BOOTSTRAP_SERVER=kafka:9094"
+      - "SPRING_KAFKA_TOPIC=test"
