@@ -10,7 +10,7 @@ mvn clean install
 **Step-2**\
 Run the below command to build the docker image
 ```aidl
-kafka_stream_consumer
+docker build . -t kafka_stream_consumer
 ```
 
 **Step-3**\
